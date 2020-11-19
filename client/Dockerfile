@@ -5,9 +5,9 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Install Dependencies
-COPY package*.json ./
+COPY package.json yarn.lock ./
 
-RUN npm install
+RUN yarn install
 
 # Copy app source code
 COPY . .
@@ -15,4 +15,4 @@ COPY . .
 # Expose ports
 EXPOSE 3000
 
-CMD ["npm","start"]
+CMD ["yarn","start"]

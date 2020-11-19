@@ -5,7 +5,7 @@ const router = require('./routes/index');
 
 const app = express(); 
 const PORT = 3001; 
-const MONGODB_URI = "mongodb://localhost:27017/my_local_db"; 
+const MONGODB_URI = "mongodb://app-db:27017/my_local_db"; 
 
 app.use(express.urlencoded({ extended: true })); 
 app.use(express.json());
