@@ -1,18 +1,17 @@
-FROM node:latest
+FROM node:14-alpine
 
 # Create App Directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Install Dependencies
-COPY package*.json ./
+COPY package.json yarn.lock ./
 
-RUN npm install
+RUN yarn install
 
 # Copy app source code
 COPY . .
 
-# Exports
+# Expose ports
 EXPOSE 3001
 
-CMD ["npm","start"]
+CMD ["yarn","start"]

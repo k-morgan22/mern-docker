@@ -9,8 +9,8 @@ services:
     ports:
       - "3001:3001"
     volumes:
-      - ./backend:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./backend:/app
+      - /app/node_modules
     depends_on:
       - database
   database:
@@ -26,8 +26,8 @@ services:
     ports: 
       - "3000:3000"
     volumes: 
-      - ./client:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./client:/app
+      - /app/node_modules
     depends_on: 
       - database 
       - backend 

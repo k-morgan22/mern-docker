@@ -1,8 +1,7 @@
-FROM node:latest
+FROM node:14-alpine
 
 # Create App Directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Install Dependencies
 COPY package.json yarn.lock ./
