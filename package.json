@@ -5,6 +5,9 @@
   "repository": "https://github.com/k-morgan22/mern-docker.git",
   "author": "kmorgan <kiki.morgan13@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"cd backend && yarn start\" \"cd client && yarn start\""
+  },
   "devDependencies": {
     "concurrently": "^5.3.0"
   }
